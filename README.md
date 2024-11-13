@@ -8,23 +8,33 @@ The **CheckOffList** is a shopping list management application built using **Ang
 - **AngularJS (1.8.2)**
 - **JavaScript**
 
+## Feature
+Two Separate Lists:
+ - To Buy: Initially populated with a set list of items, including names and quantities.
+ - Already Bought: Initially empty, this list updates as items are bought from the "To Buy" list.
+Real-Time List Management:
+ - Each item in the "To Buy" list has a "Bought" button. Clicking this button moves the item to the "Already Bought" list.
+ - Displays messages depending on the state of each list:
+    - **If the "To Buy"** list is empty: Shows the message "Everything is bought!"
+    - **If the "Already Bought"** list is empty: Shows the message "Nothing bought yet."
+      
 ## Usage
-1. Enter a list of dishes in the input field (e.g., `apple, sandwich, chips`).
-2. Click the **"Check If Too Much"** button.
-3. The application will display a message:
-   - **If the input is empty**: The message "Please enter data first" will appear in **red**.
-   - **If 3 or fewer items are entered**: The message "Enjoy!" will be shown.
-   - **If more than 3 items are entered**: The message "Too much!" will be displayed.
-
+- **View To Buy List**: The "To Buy" list shows items (e.g., 10 cookies) with a "Bought" button next to each.
+- **Mark Item as Bought**:
+      Click the "Bought" button next to an item to move it to the "Already Bought" list.
+- **View Already Bought List**: Items you mark as bought will appear here, with the message "Nothing bought yet" disappearing once an item is added.
+- 
 ## Code Highlights
-- **Two-Way Data Binding** with `ng-model` for real-time data reflection.
-- **Event Handling** using `ng-click` to trigger the `checkLunch` function.
-- **Dynamic Styling** for conditional message color changes using `ng-style`.
-<img width="751" alt="0" src="https://github.com/user-attachments/assets/405ac35e-6bf8-4511-9e3d-b1b8a87e3355">
-<img width="838" alt="1" src="https://github.com/user-attachments/assets/95a1f0f1-daf2-48f3-819e-15fcd07540f6">
-<img width="767" alt="2" src="https://github.com/user-attachments/assets/e48ca1b7-0adb-4a4c-b961-2aa54e071a69">
-<img width="765" alt="3" src="https://github.com/user-attachments/assets/c7a88204-1ba1-4e3d-b5c3-19bb1ee71160">
-
+Modular AngularJS Design:
+ - Separate Controllers for each list (ToBuyController and AlreadyBoughtController) to manage list-specific data and actions.
+ - Service-Based Data Sharing with ShoppingListCheckOffService for managing item movement between lists and maintaining list state.
+Dynamic Directives:
+ - ng-if for conditional messages based on the list’s state.
+ - ng-repeat to dynamically display items in each list.
+ - ng-click to trigger item transfers from "To Buy" to "Already Bought".
+<img width="896" alt="0" src="https://github.com/user-attachments/assets/23066b27-43c1-4a77-989a-893bd07f95ac">
+<img width="881" alt="1" src="https://github.com/user-attachments/assets/9990faba-a37b-418c-b060-1076abe96181">
+<img width="881" alt="2" src="https://github.com/user-attachments/assets/8b0d7e24-8fff-4974-ac82-499e86b78b2a">
 
 ## Author
 Created by Quang Bui.
