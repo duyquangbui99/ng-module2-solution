@@ -25,9 +25,11 @@ Real-Time List Management:
 - **View Already Bought List**: Items you mark as bought will appear here, with the message "Nothing bought yet" disappearing once an item is added.
 
 ## Code Highlights
+
 **Modular AngularJS Design**:
  - Separate Controllers for each list (ToBuyController and AlreadyBoughtController) to manage list-specific data and actions.
  - Service-Based Data Sharing with ShoppingListCheckOffService for managing item movement between lists and maintaining list state.
+   
 **Dynamic Directives**:
  - ng-if for conditional messages based on the list’s state.
  - ng-repeat to dynamically display items in each list.
